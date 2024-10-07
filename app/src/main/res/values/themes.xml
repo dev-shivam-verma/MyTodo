@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyTodo" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="TodoDateTimePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/app_light</item>
+        <item name="colorPrimaryDark">@color/app_dark</item>
+        <item name="colorAccent">@color/app_dark</item>
+    </style>
+</resources>
