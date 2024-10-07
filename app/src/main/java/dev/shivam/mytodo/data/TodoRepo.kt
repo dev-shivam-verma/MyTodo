@@ -19,7 +19,7 @@ class TodoRepo @Inject constructor(
     }
 
     suspend fun deleteTodo(todo: Todo) = withContext(Dispatchers.IO) {
-        todoDb.todoDao().addTodo(todo)
+        todoDb.todoDao().deleteTodo(todo)
     }
 
     fun updateTodo(todo: Todo) {

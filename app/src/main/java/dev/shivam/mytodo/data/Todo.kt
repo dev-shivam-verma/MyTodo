@@ -28,6 +28,7 @@ fun Todo.toUiModel() : dev.shivam.mytodo.presentation.Todo {
 
 fun dev.shivam.mytodo.presentation.Todo.toDataModel() : Todo {
     return Todo(
+        id = id,
         title = title,
         description = description,
         createdAt = createdAt.time,
