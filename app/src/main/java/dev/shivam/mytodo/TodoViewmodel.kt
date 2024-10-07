@@ -23,6 +23,9 @@ class TodoViewmodel @Inject constructor(
     var todoRepo: TodoRepo
 ) : ViewModel() {
 
+    init {
+        fetchTodos()
+    }
 
     var state by mutableStateOf(TodoListState())
         private set

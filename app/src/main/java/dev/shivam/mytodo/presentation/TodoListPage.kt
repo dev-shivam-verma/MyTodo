@@ -29,6 +29,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -49,6 +50,8 @@ import dev.shivam.mytodo.TodoViewmodel
 import dev.shivam.mytodo.ui.theme.AppDark
 import dev.shivam.mytodo.ui.theme.AppLight
 import dev.shivam.mytodo.ui.theme.AppMedium
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.datetime.toJavaLocalDateTime
 import java.time.ZoneId
 import java.util.Date
@@ -58,6 +61,7 @@ fun TodoListPage(
     viewmodel: TodoViewmodel = viewModel()
 ) {
     val state = viewmodel.state
+    val coroutineScope  = rememberCoroutineScope()
 
     var newTodoTitle by remember {
         mutableStateOf("")
@@ -150,12 +154,23 @@ fun TodoListPage(
 
             // button add Todo
             Button(onClick = {
-                viewmodel.addTodo(
-                    newTodoTitle, newTodoDesc, newTodoEndTime
-                )
+                coroutineScope.launch {
+                    delay(500)
 
-                // changing the screen state
-                isAddingTodo = false
+                    viewmodel.addTodo(
+                        newTodoTitle, newTodoDesc, newTodoEndTime
+                    )
+
+                    // reset the state
+                    isAddingTodo = false
+                    newTodoDesc = ""
+                    newTodoTitle = ""
+                    newTodoEndTime = Date()
+                }
+
+
+
+
             }
             ) {
                 Text("Add Todo")
