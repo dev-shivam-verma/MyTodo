@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "62816315299",
+    "firebase_url": "https://devshivam-chatapp-default-rtdb.firebaseio.com",
+    "project_id": "devshivam-chatapp",
+    "storage_bucket": "devshivam-chatapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62816315299:android:11d057b69407c3f7371c16",
+        "android_client_info": {
+          "package_name": "dev.shivam.mytodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62816315299-uhnivg2cg3jil9df30qm5b3a7dsso3ll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.shivam.mytodo",
+            "certificate_hash": "81e9a92a14389f674c9b665bcb8385130d5c6de2"
+          }
+        },
+        {
+          "client_id": "62816315299-st9eug8rjanbah2m3od2vcqd44mbkgb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh62-o504jGRRYZBYAGuD5HyTgcEf5xa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62816315299-st9eug8rjanbah2m3od2vcqd44mbkgb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
